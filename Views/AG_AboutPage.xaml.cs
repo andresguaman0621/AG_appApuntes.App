@@ -1,4 +1,4 @@
-namespace AG_appApuntes;
+namespace AG_appApuntes.Views;
 
 public partial class AG_AboutPage : ContentPage
 {
@@ -6,10 +6,12 @@ public partial class AG_AboutPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
+    
     private async void LearnMore_Clicked(object sender, EventArgs e)
     {
-        
-        await Launcher.Default.OpenAsync("https://aka.ms/maui");
+        if (BindingContext is Models.About about)
+        {
+            await Launcher.Default.OpenAsync("https://aka.ms/maui");
+        }
     }
 }
