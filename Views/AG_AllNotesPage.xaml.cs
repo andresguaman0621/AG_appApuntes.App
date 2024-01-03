@@ -7,5 +7,10 @@ public partial class AG_AllNotesPage : ContentPage
 		InitializeComponent();
         
     }
-    
+
+    private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+    {
+        notesCollection.SelectedItem = null;
+    }
+
 }

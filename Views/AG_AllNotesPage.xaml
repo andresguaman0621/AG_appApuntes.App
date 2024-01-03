@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:AG_appApuntes.ViewModelsAG"
              x:Class="AG_appApuntes.Views.AG_AllNotesPage"
-             Title="AG_AllNotesPage">
+             Title="AG_AllNotesPage"
+             NavigatedTo="ContentPage_NavigatedTo">
 
 
     <ContentPage.BindingContext>
