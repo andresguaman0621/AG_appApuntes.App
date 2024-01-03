@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:AG_appApuntes.Models"
+             xmlns:viewModels="clr-namespace:AG_appApuntes.ViewModelsAG"
              x:Class="AG_appApuntes.Views.AG_AboutPage"
              Title="Andres Guaman">
 
     <ContentPage.BindingContext>
-        <models:About />
+        <viewModels:AboutViewModelAG/>
     </ContentPage.BindingContext>
 
     <VerticalStackLayout Spacing="10" Margin="10">
@@ -20,6 +20,6 @@
             
         </HorizontalStackLayout>
         <Label Text="{Binding Message}" />
-        <Button Text="Aprender más" Clicked="LearnMore_Clicked" />
+        <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
     </VerticalStackLayout>
 </ContentPage>
